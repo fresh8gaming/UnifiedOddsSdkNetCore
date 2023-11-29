@@ -32,6 +32,7 @@ namespace Sportradar.OddsFeed.SDK.Api.Internal.Config
                             };
             EnvironmentSettings = new List<EnvironmentSetting>
                   {
+                      new EnvironmentSetting(SdkEnvironment.ProxyFresh8, "bookie-proxy-main.internal.fresh8:5671", "bookie-proxy-main.internal.fresh8:8008", false, new List<SdkEnvironment> {SdkEnvironment.Integration}),
                       new EnvironmentSetting(SdkEnvironment.Production, "mq.betradar.com", "api.betradar.com", true, new List<SdkEnvironment> {SdkEnvironment.Integration}),
                       new EnvironmentSetting(SdkEnvironment.Integration, "stgmq.betradar.com", "stgapi.betradar.com", true, new List<SdkEnvironment> {SdkEnvironment.Production}),
                       new EnvironmentSetting(SdkEnvironment.Replay, "replaymq.betradar.com", "stgapi.betradar.com", true, basicRetryList),
