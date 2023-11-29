@@ -9579,6 +9579,11 @@
             The Tokyo proxy
             </summary>
         </member>
+        <member name="F:Sportradar.OddsFeed.SDK.Common.Enums.SdkEnvironment.ProxyFresh8">
+            <summary>
+            The Fresh8 proxy
+            </summary>
+        </member>
         <member name="T:Sportradar.OddsFeed.SDK.Common.Exceptions.CacheItemNotFoundException">
             <summary>
             An exception thrown by the SDK cache components when the requested key was not found in the cache
@@ -28945,32 +28950,6 @@
             <param name="deserializer">A <see cref="T:Sportradar.OddsFeed.SDK.Common.Internal.IDeserializer`1" /> used to deserialize the fetch data</param>
             <param name="mapperFactory">A <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.ISingleTypeMapperFactory`2" /> used to construct instances of <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.ISingleTypeMapper`1" /></param>
         </member>
-        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory">
-            <summary>
-            A factory used to build <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> from their string definition
-            </summary>
-            <seealso cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidatorFactory" />
-        </member>
-        <member name="F:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.DecimalPattern">
-            <summary>
-            A regex pattern used to match specifiers requiring specific decimal value (e.g. x.5)
-            </summary>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.BuildSingle(System.String,System.String)">
-            <summary>
-            Builds a single <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/>
-            </summary>
-            <param name="name">The name of the specifier</param>
-            <param name="value">The value defining required value(s) of the specifier</param>
-            <returns>IMappingValidator</returns>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.Build(System.String)">
-            <summary>
-            Builds and returns a <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> from the provided string
-            </summary>
-            <param name="value">A value defining the <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> to be constructed</param>
-            <returns>A <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> build from the provided string</returns>
-        </member>
         <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.AvailableSelectionsMapper">
             <summary>
             A <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.ISingleTypeMapper`1" /> used to map <see cref="T:Sportradar.OddsFeed.SDK.Messages.Rest.AvailableSelectionsType" /> instances to <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Dto.CustomBet.AvailableSelectionsDto" /> instances
@@ -30166,6 +30145,32 @@
             </summary>
             <param name="data">A input instance which the created <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.VariantDescriptionsMapper"/> will map</param>
             <returns>New <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.Mapping.VariantDescriptionsMapper" /> instance</returns>
+        </member>
+        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory">
+            <summary>
+            A factory used to build <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> from their string definition
+            </summary>
+            <seealso cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidatorFactory" />
+        </member>
+        <member name="F:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.DecimalPattern">
+            <summary>
+            A regex pattern used to match specifiers requiring specific decimal value (e.g. x.5)
+            </summary>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.BuildSingle(System.String,System.String)">
+            <summary>
+            Builds a single <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/>
+            </summary>
+            <param name="name">The name of the specifier</param>
+            <param name="value">The value defining required value(s) of the specifier</param>
+            <returns>IMappingValidator</returns>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MappingValidatorFactory.Build(System.String)">
+            <summary>
+            Builds and returns a <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> from the provided string
+            </summary>
+            <param name="value">A value defining the <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> to be constructed</param>
+            <returns>A <see cref="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.IMappingValidator"/> build from the provided string</returns>
         </member>
         <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Internal.MarketNames.CardinalNameExpression">
             <summary>
@@ -33451,6 +33456,113 @@
             Get the wind advantage
             </summary>
         </member>
+        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute">
+            <summary>
+            Represents market attribute used to provide additional information about a market
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute.Name">
+            <summary>
+            Gets the attribute name
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute.Description">
+            <summary>
+            Gets the attribute description
+            </summary>
+        </member>
+        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription">
+            <summary>
+            Defines a contract implemented by classes representing market description
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Id">
+            <summary>
+            Gets the id of the market described by the current instance
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Outcomes">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing the outcomes of the market
+            described by the current instance
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Specifiers">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing the specifiers of the market
+            described by the current instance
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Mappings">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing the mappings of the market
+            described by the current instance
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Attributes">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing market attributes providing
+            additional information about the market.
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.OutcomeType">
+            <summary>
+            Gets the outcome_type market attribute - an indication of which type of outcomes the market includes
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Groups">
+            <summary>
+            Gets a list of groups to which the market belongs to
+            </summary>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.GetName(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the name of the market description in the language specified by the passed <c>culture</c>
+            </summary>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/> specifying the language of the retrieved name</param>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.GetDescription(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the description of the market description in the language specified by the passed <c>culture</c>
+            </summary>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/> specifying the language of the retrieved description</param>
+        </member>
+        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription">
+            <summary>
+            Defines a contract implemented by classes representing betting outcome description
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.Id">
+            <summary>
+            Gets a value uniquely identifying the current outcome within the market
+            </summary>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.GetName(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the name of the betting outcome represented by the current instance
+            </summary>
+        </member>
+        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.GetDescription(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the description of the betting outcome represented by the current instance
+            </summary>
+        </member>
+        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier">
+            <summary>
+            Defines a contract implemented by classes representing market / outright / outcome specifiers
+            representing a part of unique identifiers
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier.Type">
+            <summary>
+            Gets the type name of the specifier represented by the current instance
+            </summary>
+        </member>
+        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier.Name">
+            <summary>
+            Gets the name of the specifier represented by the current instance
+            </summary>
+        </member>
         <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.MarketMapping.IMarketMapping">
             <summary>
             Defines a contract implemented by classes representing mapping ids of markets and outcomes
@@ -33616,113 +33728,6 @@
         <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.MarketMapping.LoMarketMapping.ToString">
             <summary>Returns a string that represents the current object.</summary>
             <returns>A string that represents the current object.</returns>
-        </member>
-        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute">
-            <summary>
-            Represents market attribute used to provide additional information about a market
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute.Name">
-            <summary>
-            Gets the attribute name
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketAttribute.Description">
-            <summary>
-            Gets the attribute description
-            </summary>
-        </member>
-        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription">
-            <summary>
-            Defines a contract implemented by classes representing market description
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Id">
-            <summary>
-            Gets the id of the market described by the current instance
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Outcomes">
-            <summary>
-            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> describing the outcomes of the market
-            described by the current instance
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Specifiers">
-            <summary>
-            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing the specifiers of the market
-            described by the current instance
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Mappings">
-            <summary>
-            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing the mappings of the market
-            described by the current instance
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Attributes">
-            <summary>
-            Gets the <see cref="T:System.Collections.Generic.IEnumerable`1"/> representing market attributes providing
-            additional information about the market.
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.OutcomeType">
-            <summary>
-            Gets the outcome_type market attribute - an indication of which type of outcomes the market includes
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.Groups">
-            <summary>
-            Gets a list of groups to which the market belongs to
-            </summary>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.GetName(System.Globalization.CultureInfo)">
-            <summary>
-            Gets the name of the market description in the language specified by the passed <c>culture</c>
-            </summary>
-            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/> specifying the language of the retrieved name</param>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IMarketDescription.GetDescription(System.Globalization.CultureInfo)">
-            <summary>
-            Gets the description of the market description in the language specified by the passed <c>culture</c>
-            </summary>
-            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/> specifying the language of the retrieved description</param>
-        </member>
-        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription">
-            <summary>
-            Defines a contract implemented by classes representing betting outcome description
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.Id">
-            <summary>
-            Gets a value uniquely identifying the current outcome within the market
-            </summary>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.GetName(System.Globalization.CultureInfo)">
-            <summary>
-            Gets the name of the betting outcome represented by the current instance
-            </summary>
-        </member>
-        <member name="M:Sportradar.OddsFeed.SDK.Entities.Rest.Market.IOutcomeDescription.GetDescription(System.Globalization.CultureInfo)">
-            <summary>
-            Gets the description of the betting outcome represented by the current instance
-            </summary>
-        </member>
-        <member name="T:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier">
-            <summary>
-            Defines a contract implemented by classes representing market / outright / outcome specifiers
-            representing a part of unique identifiers
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier.Type">
-            <summary>
-            Gets the type name of the specifier represented by the current instance
-            </summary>
-        </member>
-        <member name="P:Sportradar.OddsFeed.SDK.Entities.Rest.Market.ISpecifier.Name">
-            <summary>
-            Gets the name of the specifier represented by the current instance
-            </summary>
         </member>
         <member name="T:Sportradar.OddsFeed.SDK.Messages.Feed.FeedMarket">
             <summary>

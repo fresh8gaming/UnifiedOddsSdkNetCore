@@ -46,7 +46,7 @@ namespace Sportradar.OddsFeed.SDK.Common.Enums
         /// <summary>
         /// The Tokyo proxy
         /// </summary>
-        ProxyTokyo
+        ProxyTokyo,
 
         /// <summary>
         /// The Fresh8 proxy
